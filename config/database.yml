@@ -13,7 +13,19 @@
 #
 # Configure Using Gemfile
 # gem 'pg'
-#
+
+
+
+
+
+# for heroku connection
+development:
+  adapter: postgresql
+  host: localhost
+  username: user
+  database: app-dev
+
+
 default: &default
   adapter: postgresql
   encoding: unicode
