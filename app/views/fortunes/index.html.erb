@@ -1,0 +1,10 @@
+	<!-- your nihilistic fortune cookie reads: -->
+	<br>
+	<% x = @fortunes.length %>
+	<% num = rand(x) %>
+	<% a = rand(10), rand(10..24), rand(25..49) %>
+	<div class="cool">
+		<%= @fortunes[num].quote %> <br>
+		<br>
+		Meaningless numbers: <%= a %>
+	</div>

@@ -1,0 +1,68 @@
+body { 
+	background-color: black;
+	color: #fff;
+	font-family: 'Avenir', sans-serif;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 15%;
+	font-size: 26px;
+}
+.cool {
+
+	width: 750px;
+	height: 125px;
+	margin: 0 auto;
+	padding: 25px;
+	background-color: lightgray;
+	color: black;
+	border-radius: 5px;
+	opacity: 0;
+   -webkit-animation: profile 1s 1 alternate ease forwards .2s;
+   -moz-animation: profile 1s 1 alternate ease forwards .2s;
+   -ms-animation: profile 1s 1 alternate ease forwards .2s;
+   -o-animation: profile 1s 1 alternate ease forwards .2s;
+   animation: profile 1s 1 alternate ease forwards .2s;
+}
+@-webkit-keyframes profile {
+   0% {opacity: 0; top: -50px;}
+   100% {opacity: 1; top: 0;}
+}
+@-moz-keyframes profile {
+   0% {opacity: 0; top: -50px;}
+   100% {opacity: 1; top: 0;}
+}
+@-ms-keyframes profile {
+   0% {opacity: 0; top: -50px;}
+   100% {opacity: 1; top: 0;}
+}
+@-o-keyframes profile {
+   0% {opacity: 0; top: -50px;}
+   100% {opacity: 1; top: 0;}
+}
+@keyframes profile {
+   0% {opacity: 0; top: -50px;}
+   100% {opacity: 1; top: 0;}
+}
+
+@-webkit-keyframes fadein {
+ 0%   { opacity: 0; }
+ 100% { opacity: 1; }
+}
+@-moz-keyframes fadein {
+ 0%   { opacity: 0; }
+ 100% { opacity: 1; }
+}
+@-o-keyframes fadein {
+ 0%   { opacity: 0; }
+ 100% { opacity: 1; }
+}
+@keyframes fadein {
+ 0%   { opacity: 0; }
+ 100% { opacity: 1; }
+}
+
+.container {
+	border: 5px double red;
+	width: 500px;
+	margin: 0 auto;
+}

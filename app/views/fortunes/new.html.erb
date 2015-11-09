@@ -1,0 +1,5 @@
+<%= form_for :fortune, url: "/fortunes", method: "post" do |f| %>
+	<%= f.text_field :quote%>
+	<%= f.text_field :author%>
+	<%= f.submit "save fortune"%>
+<% end %>

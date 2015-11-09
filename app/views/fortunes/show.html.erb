@@ -1,0 +1,12 @@
+<ol>
+	<% @fortunes.each do |fortune| %>
+	<div class="container">
+		
+		<li>
+			<%= fortune.quote %>
+			<%= fortune.author %>
+			<%= button_to "Delete", fortune, method: :delete %>
+		</li>
+	</div>
+	<% end %>
+</ol>
