@@ -19,6 +19,9 @@ gem 'bootstrap-sass'
 
 gem 'bootstrap', '~>4.0.0.alpha1'
 
+gem 'phaser-rails'
+
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

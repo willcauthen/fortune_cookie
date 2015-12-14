@@ -1,0 +1,42 @@
+<canvas id="killingField" width="400" height="400" style="border:1px solid red" onload="gameTime()">
+	
+</canvas>
+
+<script>
+	
+function gameTime(){
+	var requestAnimFrame = (function(){
+    return window.requestAnimationFrame       ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame    ||
+        window.oRequestAnimationFrame      ||
+        window.msRequestAnimationFrame     ||
+        function(callback){
+            window.setTimeout(callback, 1000 / 60);
+        };
+})();
+
+	console.log("the game thing is marginally functional");
+	var canvas = document.getElementById("killingField");
+	var ctx = canvas.getContext("2d");
+	ctx.beginPath();
+	ctx.rect(20, 40, 50, 50);
+	ctx.fillStyle = "#FF0000";
+	ctx.fill();
+	ctx.closePath();
+	// main game loop
+	var lastTime;
+	main();
+	function main() {
+		console.log("counting");
+	    var now = Date.now();
+	    var dt = (now - lastTime) / 1000.0;
+
+	    update(dt);
+	    render();
+
+	    lastTime = now;
+	    requestAnimFrame(main);
+	}
+}
+</script>

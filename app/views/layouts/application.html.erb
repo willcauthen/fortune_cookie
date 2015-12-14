@@ -6,11 +6,11 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
   <%= csrf_meta_tags %>
+
   
 </head>
-<body onload="preparePage()">
-<img id="cookie" onclick="smash()" src="http://f.tqn.com/y/webclipart/1/S/z/I/6/Fortune-Cookie.png">
-<!-- <img id="debris" src="https://cdn0.iconfinder.com/data/icons/common-warnings/512/explosion_crack_rock-512.png" alt=""> -->
+<body onload="preparePage(), gameTime()">
+
 
 	 <% if current_user %>
 	<h1> <%= current_user.user_name %> <br>

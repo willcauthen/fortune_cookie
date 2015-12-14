@@ -38,4 +38,8 @@ class FortunesController < ApplicationController
 		fortune.destroy
 		redirect_to fortunes_path
 	end
+	def gameBoard
+		render :gameBoard
+	end
+
 end
