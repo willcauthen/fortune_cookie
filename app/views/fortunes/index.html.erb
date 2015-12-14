@@ -3,7 +3,7 @@
 	<% x = @fortunes.length %>
 	<% num = rand(x) %>
 	<% a = rand(10), rand(10..24), rand(25..49) %>
-	<div class="cool">
+	<div class="cool" id="prophesy" style="">
 		<%= @fortunes[num].quote %> <br>
 		<br>
 		Meaningless numbers: <%= a %>
