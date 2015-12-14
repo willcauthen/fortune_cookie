@@ -4,10 +4,23 @@
   <title>FortuneCookie</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
   <%= csrf_meta_tags %>
+
   
 </head>
-<body>
+<body onload="preparePage(), gameTime()">
+
+
+	 <% if current_user %>
+	<h1> <%= current_user.user_name %> <br>
+	<h2>Score: <%= current_user.score %></h2>
+	 </h1>
+
+	 <% else %>
+	 <a href="/sign-in"> <%= "Sign in, yo" %> </a>
+
+	 <% end %>
 
 <%= yield %>
 

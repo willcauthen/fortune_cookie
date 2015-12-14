@@ -1,10 +1,14 @@
-	<!-- your nihilistic fortune cookie reads: -->
+ 	<!-- your nihilistic fortune cookie reads: -->
 	<br>
+<div>
+	<img id="cookie" onclick="smash()" src="/img/Fortune-Cookie.png" >
+	<img id="debris" src="/img/explosion.png" alt="" style="display:none">
 	<% x = @fortunes.length %>
 	<% num = rand(x) %>
 	<% a = rand(10), rand(10..24), rand(25..49) %>
-	<div class="cool">
+	<div class="cool" id="prophesy" style="display:none">
 		<%= @fortunes[num].quote %> <br>
 		<br>
-		Meaningless numbers: <%= a %>
+		Meaningless numbers: <%= a %> 
 	</div>
+</div>

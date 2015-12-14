@@ -5,6 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+# User.create(user_name: "wilbo", email: "wtf@bbq.com", password_digest: "password", score: 0)
+
 Fortune.create({ quote: "you would rather die than face the truth",
  author: "unknown"})
 
@@ -98,7 +100,7 @@ Fortune.create({ quote: "you won't be anyone besides you for the rest of your li
 Fortune.create({ quote: "fashion tip: nobody cares",
  author: "unknown"})
 
-Fortune.create({ quote: "you look stupid in pictures and that's why no one lifes you",
+Fortune.create({ quote: "you look stupid in pictures and that's why no one likes you",
  author: "unknown"})
 
 Fortune.create({ quote: "Simon says lower your expectations",
