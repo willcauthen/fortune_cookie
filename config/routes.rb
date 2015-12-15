@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   	get "/sign-in", to: "sessions#new"
   	post "/sessions", to: "sessions#create"
 
-  	get "/sign_up", to: "users#new", as: "sign_up"
+  	get "/sign-up", to: "users#new", as: "sign-up"
 
   resources :users
 
