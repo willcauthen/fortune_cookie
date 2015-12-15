@@ -20,6 +20,6 @@ class SessionsController < ApplicationController
 		p session[:user_id]
 		logout
 		p session[:user_id]
-  		redirect_to root
+  		redirect_to "/"
   	end
 end

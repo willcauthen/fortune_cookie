@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     resources :fortunes
   	resources :users 
 
+    delete 'logout' => 'sessions#destroy'
+
   	get "/sign-in", to: "sessions#new"
   	post "/sessions", to: "sessions#create"
 

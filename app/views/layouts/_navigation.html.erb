@@ -1,5 +1,5 @@
 <div id="logout">
-  <button onclick="logMeOut()">X</button>
+ <button><%= link_to "X", logout_path, method: :delete %></button>
 </div>
 
 <div id="navbar">
@@ -8,6 +8,6 @@
   <% else %>
   <a href="/sign-in"><button class="navBtn btn1">Sign-in</button></a>
   <% end %>
-  <a href="/"><button class="navBtn btn2">High Scorez</button></a>
+  <a href="#" onclick="window.location.reload(true)"><button class="navBtn btn2">High Scorez</button></a>
   <a href="/game"><button class="navBtn btn3">Game</button></a>
 </div>
