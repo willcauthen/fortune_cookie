@@ -10,7 +10,7 @@
   
 </head>
 <body onload="preparePage(), gameTime()">
-
+<%= render '/layouts/navigation' %>
 
 	 <% if current_user %>
 	<h1> <%= current_user.user_name %> <br>
@@ -18,7 +18,8 @@
 	 </h1>
 
 	 <% else %>
-	 <a href="/sign-in"> <%= "Sign in, yo" %> </a>
+	 <a href="/sign-in"> <%= "Sign in, yo" %> </a> <br>
+	 <a href="/users/new"> <%= "Sign up, yo" %> </a>
 
 	 <% end %>
 

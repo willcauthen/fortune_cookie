@@ -72,4 +72,23 @@ canvas {
 	margin: 0 auto;
 }
 
+#logout {
+	position : absolute;
+	top : 0px;
+	right : 0px;
+	padding : 10px;
+}
+.navBtn {
 
+}
+
+.btn1 {
+	margin-right: 50px;
+}
+.btn2 {
+	margin-left: 50px;
+	margin-right: 50px;
+}
+.btn3 {
+	margin-left: 50px;
+}
