@@ -10,19 +10,18 @@
   
 </head>
 <body onload="preparePage(), gameTime()">
-<%= render '/layouts/navigation' %>
-
 	 <% if current_user %>
-	<h1> <%= current_user.user_name %> <br>
-	<h2>Score: <%= current_user.score %></h2>
-	 </h1>
+	<h4> <%= current_user.user_name %> <br>
+	 </h4>
 
 	 <% else %>
-	 <a href="/sign-in"> <%= "Sign in, yo" %> </a> <br>
-	 <a href="/users/new"> <%= "Sign up, yo" %> </a>
-
+	 <p>Behold! You've found the perfect activity to wile away your dwindling time on this earth, and find hollow distraction from the toil that are the day-to-day horrors of existence. </p>
 	 <% end %>
+	 <hr>
+<%= render '/layouts/navigation' %>
 
+
+<hr>
 <%= yield %>
 
 </body>

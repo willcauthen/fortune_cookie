@@ -1,9 +1,13 @@
 <div id="logout">
-  <button>X</button>
+  <button onclick="logMeOut()">X</button>
 </div>
 
 <div id="navbar">
+  <% if (current_user) %>
   <a href="/users/<%= current_user.id %>"><button class="navBtn btn1">Profile</button></a>
-  <a href="#"><button class="navBtn btn2">High Scorez</button></a>
+  <% else %>
+  <a href="/sign-in"><button class="navBtn btn1">Sign-in</button></a>
+  <% end %>
+  <a href="/"><button class="navBtn btn2">High Scorez</button></a>
   <a href="/game"><button class="navBtn btn3">Game</button></a>
 </div>

@@ -38,3 +38,8 @@ function killingField() {
 	};
 	bgImage.src = "http://www.imarvintpa.com/Mapping/Tiles/Ceramic/floor_tile_ceramicBlue.png";
 }
+
+function logMeOut() {
+	current_user = 0;
+	console.log("logout function has been triggered");
+}
