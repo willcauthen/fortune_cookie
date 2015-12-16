@@ -5,38 +5,86 @@
 <script>
 	
 function gameTime(){
-	var requestAnimFrame = (function(){
-    return window.requestAnimationFrame       ||
-        window.webkitRequestAnimationFrame ||
-        window.mozRequestAnimationFrame    ||
-        window.oRequestAnimationFrame      ||
-        window.msRequestAnimationFrame     ||
-        function(callback){
-            window.setTimeout(callback, 1000 / 60);
-        };
-})();
-
-	console.log("the game thing is marginally functional");
+	// Create the canvas
 	var canvas = document.getElementById("killingField");
-	var ctx = canvas.getContext("2d");
-	ctx.beginPath();
-	ctx.rect(20, 40, 50, 50);
-	ctx.fillStyle = "#FF0000";
-	ctx.fill();
-	ctx.closePath();
-	// main game loop
-	var lastTime;
-	main();
-	function main() {
-		console.log("counting");
-	    var now = Date.now();
-	    var dt = (now - lastTime) / 1000.0;
+	var context = canvas.getContext("2d");
 
-	    update(dt);
-	    render();
+	context.beginPath();
+	var img = new Image();
+	img.onload = function() {
+  		var cookie1 = context.drawImage(img, 0, 0, 75, 75);
+  		var cookie2 = context.drawImage(img, 150, 150, 75, 75);
+  		var cookie3 = context.drawImage(img, 300, 0, 75, 75);
+  		var cookie4 = context.drawImage(img, 0, 300, 75, 75);
+  		var cookie5 = context.drawImage(img, 300, 300, 75, 75);
+  		var cookie6 = context.drawImage(img, 0, 150, 75, 75);
+  		var cookie7 = context.drawImage(img, 150, 0, 75, 75);
+  		var cookie8 = context.drawImage(img, 300, 150, 75, 75);
+  		var cookie9 = context.drawImage(img, 150, 300, 75, 75);
 
-	    lastTime = now;
-	    requestAnimFrame(main);
-	}
+	};
+	img.src = "/img/Fortune-Cookie.png";
+
+	
+	closePath();
+
+// 	var requestAnimFrame = (function(){
+//     return window.requestAnimationFrame       ||
+//         window.webkitRequestAnimationFrame ||
+//         window.mozRequestAnimationFrame    ||
+//         window.oRequestAnimationFrame      ||
+//         window.msRequestAnimationFrame     ||
+//         function(callback){
+//             window.setTimeout(callback, 1000 / 60);
+//         };
+// 	})();
+
+	// console.log("the game thing is marginally functional");
+	// var canvas = document.getElementById("killingField");
+	// var context = canvas.getContext("2d");
+	// var imageObj = new Image();
+	// imageObj.src = 'img/Fortune-Cookie.png';
+
+
+// 	var elem = document.getElementById('killingField'),
+//     elemLeft = elem.offsetLeft,
+//     elemTop = elem.offsetTop,
+//     context = elem.getContext('2d'),
+//     elem
+//     elements = [];
+
+// // Add event listener for `click` events.
+// elem.addEventListener('click', function(event) {
+//     var x = event.pageX - elemLeft,
+//         y = event.pageY - elemTop;
+
+//     // Collision detection between clicked offset and element.
+//     elements.forEach(function(element) {
+//         if (y > element.top && y < element.top + element.height 
+//             && x > element.left && x < element.left + element.width) {
+//             alert('clicked an element');
+//         }
+//     });
+
+// }, false);
+
+// // Add element.
+// elements.push({
+//     width: 75,
+//     height: 75,
+//     top: 20,
+//     left: 15
+// });
+
+
+// // Render elements.
+// elements.forEach(function(element) {
+//     imageObj.onload = function() {
+//   		context.drawImage(imageObj, 0, 0, 75, 75);
+// 	};
+// });
+
 }
+
+
 </script>
