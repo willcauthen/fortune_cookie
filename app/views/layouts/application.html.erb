@@ -9,10 +9,9 @@
 
   
 </head>
-<body onload="preparePage(), gameTime()">
+<body onload="preparePage()">
 	 <% if current_user %>
-	<h4> <%= current_user.user_name %> <br>
-	 </h4>
+	<h4> <%= current_user.user_name %> : <%= current_user.score %> </h4>
 
 	 <% else %>
 	 <p>Behold! You've found the perfect activity to wile away your dwindling time on this earth, and find hollow distraction from the toil that are the day-to-day horrors of existence. </p>

@@ -21,6 +21,10 @@ class UsersController < ApplicationController
 		# @user = User.find(params[:id])
 		render :show
 	end
+	def update
+		increment_score
+	end
+
 
 	private
 

@@ -5,7 +5,6 @@ module SessionsHelper
 	 end
 	
 	 def current_user
-	    p session[:user_id]
 	    if session[:user_id] == nil
 	      @current_user = nil
 	    else

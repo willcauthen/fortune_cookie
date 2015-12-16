@@ -15,7 +15,6 @@ class FortunesController < ApplicationController
 		end
 	end
 	def show
-		# id = params[:id]
 		@fortunes = Fortune.all
 		# @fortune = Fortune.find(id)
 		render :show
@@ -41,5 +40,6 @@ class FortunesController < ApplicationController
 	def gameBoard
 		render :gameBoard
 	end
+	
 
 end

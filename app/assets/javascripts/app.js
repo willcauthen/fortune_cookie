@@ -25,7 +25,10 @@ function smash() {
 		debris.style.display = '';
 		prophesy.style.display = "block";
 		console.log("it was clicked");
+		
 	} 
+	adjustScore();
+		setTimeout(refresh, 4000);
 	
 }
 
@@ -42,4 +45,17 @@ function killingField() {
 function logMeOut() {
 	current_user = 0;
 	console.log("logout function has been triggered");
+}
+		function refresh() {
+					document.location.reload(true);
+				}
+
+function adjustScore() {
+	$.ajax({
+		type: 'PUT',
+		url: '/increment_score',
+		data: { _method: 'PUT'},
+	}).success (200, function() {
+		console.log("success");
+	});
 }
