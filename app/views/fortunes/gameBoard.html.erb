@@ -1,3 +1,7 @@
+<p>Now, the main event! The ultimate test of human endurance, challenging you to surpass the limits of time itself!</p>
+
+<h2>CAN YOU DESTROY ALL THE COOKIES BEFORE TIME RUNS OUT??</h2>
+
 <canvas id="killingField" width="400" height="400" style="border:1px solid red" onclick="gameTime()" >
 	
 </canvas>
@@ -6,9 +10,10 @@
 	var canvas = document.getElementById("killingField");
 	var context = canvas.getContext("2d");
 	var uninitiated = true;
+	var winner = [false, false, false, false, false, false, false, false, false];
+	var isWinner = false;
 	
-
-function gameTime(){
+function gameTime() {
 	canvas.addEventListener('click', function(e) {
 		var canvasLeft = canvas.offsetLeft,
 			canvasTop  = canvas.offsetTop;
@@ -18,29 +23,48 @@ function gameTime(){
 		};
 			var imgObj = new Image();
 			imgObj.src = "/img/explosion.png";
-		if (pos.x < 75 && pos.y <75) {
-			context.drawImage(imgObj, pos.x - 50, pos.y - 50, 120, 120);
-			// context.drawImage(imgObj, 0, 0, 120, 120);
-			// console.log("cookie 1 has been clicked");
+		if (isWinner === true ) {
+			console.log("we already have a winner");
+			// winnerCheck(winner);
 
+		} else if (pos.x < 75 && pos.y <75) {
+			winner[0] = true;
+			// winnerCheck(winner);
+			context.drawImage(imgObj, pos.x - 50, pos.y - 50, 120, 120);
 		} else if ((pos.x < 215 && pos.x > 155) && (pos.y < 75)) {
+			winner[1] = true;
+			// winnerCheck(winner);
 			context.drawImage(imgObj, pos.x - 50, pos.y - 50, 120, 120);
 		} else if ((pos.x < 365 && pos.x > 305) && (pos.y < 75) ) {
+			winner[2] = true;
+			// winnerCheck(winner);
 			context.drawImage(imgObj, pos.x - 50, pos.y - 50, 120, 120);
 		} else if ((pos.x < 75) && (pos.y < 215 && pos.y > 155)) {
+			winner[3] = true;
+			// winnerCheck(winner);
 			context.drawImage(imgObj, pos.x - 50, pos.y - 50, 120, 120);
 		} else if ((pos.x < 215 && pos.x > 155)&& (pos.y < 215 && pos.y > 155)){
+			winner[4] = true;
+			// winnerCheck(winner);
 			context.drawImage(imgObj, pos.x - 50, pos.y - 50, 120, 120);
 		} else if ((pos.x < 365 && pos.x > 305) && (pos.y < 215 && pos.y > 155)) {
+			winner[5] = true;
+			// winnerCheck(winner);
 			context.drawImage(imgObj, pos.x - 50, pos.y - 50, 120, 120);
 		} else if ((pos.x < 75) && (pos.y < 365 && pos.y > 305)) {
+			winner[6] = true;
+			// winnerCheck(winner);
 			context.drawImage(imgObj, pos.x - 50, pos.y - 50, 120, 120);
 		} else if ((pos.x < 215 && pos.x > 155) && (pos.y < 365 && pos.y > 305)) {
+			winner[7] = true;
+			// winnerCheck(winner);
 			context.drawImage(imgObj, pos.x - 50, pos.y - 50, 120, 120);
 		} else if ((pos.x < 365 && pos.x > 305) && (pos.y < 365 && pos.y > 305)) {
+			winner[8] = true;
+			// winnerCheck(winner);
 			context.drawImage(imgObj, pos.x - 50, pos.y - 50, 120, 120);
-		} else {
-			console.log("YOU MISSED OMG");
+		} else  {
+			console.log("MISSED!! OMG");
 		}
 
 
@@ -70,10 +94,17 @@ function gameTime(){
 
 	}
 } 
-	//<---- function uninitiated
 
-
-
+	// function winnerCheck(winner) {
+	// 	for (var i = 0; i < winner.length-1; i++){
+	// 		if (winner[i] === false) {
+	// 			return;
+	// 		} else {
+	// 			console.log("There's a winner");
+	// 			return (isWinner = true);
+	// 		}
+	// 	}
+	// }
 
 
 
