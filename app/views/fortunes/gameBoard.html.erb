@@ -1,43 +1,65 @@
-<canvas id="killingField" width="400" height="400" style="border:1px solid red" onload="gameTime()" >
+<canvas id="killingField" width="400" height="400" style="border:1px solid red" onclick="gameTime()" >
 	
 </canvas>
 
 <script>
 	var canvas = document.getElementById("killingField");
 	var context = canvas.getContext("2d");
+	var uninitiated = true;
 	
+
 function gameTime(){
-	// Create the canvas
-	var img = new Image();
-	img.onload = function() {
-		context.drawImage(img, 0, 0, 75, 75);
-		context.drawImage(img, 150, 150, 75, 75);
-		context.drawImage(img, 300, 0, 75, 75);
-		context.drawImage(img, 0, 300, 75, 75);
-		context.drawImage(img, 300, 300, 75, 75);
-		context.drawImage(img, 0, 150, 75, 75);
-		context.drawImage(img, 150, 0, 75, 75);
-		context.drawImage(img, 300, 150, 75, 75);
-		context.drawImage(img, 150, 300, 75, 75);
-
-	};
-	img.src = "/img/Fortune-Cookie.png";
-
-		elements = [];
-
-
-
-}
-
 	canvas.addEventListener('click', function(e) {
-	var canvasLeft = canvas.offsetLeft,
-		canvasTop  = canvas.offsetTop;
-	var pos = {
-		x : e.pageX - canvasLeft, 
-		y : e.pageY - canvasTop
-	};
-	console.log(pos.x, pos.y)
-}, false )
+		var canvasLeft = canvas.offsetLeft,
+			canvasTop  = canvas.offsetTop;
+		var pos = {
+			x : e.pageX - canvasLeft, 
+			y : e.pageY - canvasTop
+		};
+			var imgObj = new Image();
+			imgObj.src = "/img/explosion.png";
+		if (pos.x < 75 && pos.y <75) {
+			context.drawImage(imgObj, pos.x - 50, pos.y - 50, 120, 120);
+			// context.drawImage(imgObj, 0, 0, 120, 120);
+			// console.log("cookie 1 has been clicked");
+
+		} else if ((pos.x < 215 && pos.x > 155) && (pos.y < 75)) {
+			context.drawImage(imgObj, pos.x - 50, pos.y - 50, 120, 120);
+		} else if ((pos.x < 365 && pos.x > 305) && (pos.y < 75) ) {
+			context.drawImage(imgObj, pos.x - 50, pos.y - 50, 120, 120);
+		}
+
+
+
+
+		console.log(pos.x, pos.y);
+	}, false );
+	if (uninitiated) {
+		uninitiated = false;
+		console.log("function known as gameTime is hereby running");
+		// Create the canvas
+		var img = new Image();
+		img.onload = function() {
+			console.log("here before the images are drawn");
+			context.drawImage(img, 0, 0, 75, 75);
+			context.drawImage(img, 0, 150, 75, 75);
+			context.drawImage(img, 0, 300, 75, 75);
+			context.drawImage(img, 150, 0, 75, 75);
+			context.drawImage(img, 300, 0, 75, 75);
+			context.drawImage(img, 150, 150, 75, 75);
+			context.drawImage(img, 150, 300, 75, 75);
+			context.drawImage(img, 300, 150, 75, 75);
+			context.drawImage(img, 300, 300, 75, 75);
+			console.log("here the images are drawn");
+		};
+		img.src = "/img/Fortune-Cookie.png";
+	} else {
+		console.log("game has already been initiated. how'd it go?");
+
+	}
+} 
+	//<---- function uninitiated
+
 
 
 

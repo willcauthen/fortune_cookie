@@ -4,6 +4,5 @@ module UsersHelper
 		puts "incrementing score from User Controller"
 		current_user.score += 1
 		current_user.save
-		
 	end
 end
