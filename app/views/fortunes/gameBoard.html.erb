@@ -25,46 +25,47 @@ function gameTime() {
 			imgObj.src = "/img/explosion.png";
 		if (isWinner === true ) {
 			console.log("we already have a winner");
-			// winnerCheck(winner);
+			winnerCheck(winner);
 
 		} else if (pos.x < 75 && pos.y <75) {
 			winner[0] = true;
-			// winnerCheck(winner);
+			winnerCheck(winner);
 			context.drawImage(imgObj, pos.x - 50, pos.y - 50, 120, 120);
 		} else if ((pos.x < 215 && pos.x > 155) && (pos.y < 75)) {
 			winner[1] = true;
-			// winnerCheck(winner);
+			winnerCheck(winner);
 			context.drawImage(imgObj, pos.x - 50, pos.y - 50, 120, 120);
 		} else if ((pos.x < 365 && pos.x > 305) && (pos.y < 75) ) {
 			winner[2] = true;
-			// winnerCheck(winner);
+			winnerCheck(winner);
 			context.drawImage(imgObj, pos.x - 50, pos.y - 50, 120, 120);
 		} else if ((pos.x < 75) && (pos.y < 215 && pos.y > 155)) {
 			winner[3] = true;
-			// winnerCheck(winner);
+			winnerCheck(winner);
 			context.drawImage(imgObj, pos.x - 50, pos.y - 50, 120, 120);
 		} else if ((pos.x < 215 && pos.x > 155)&& (pos.y < 215 && pos.y > 155)){
 			winner[4] = true;
-			// winnerCheck(winner);
+			winnerCheck(winner);
 			context.drawImage(imgObj, pos.x - 50, pos.y - 50, 120, 120);
 		} else if ((pos.x < 365 && pos.x > 305) && (pos.y < 215 && pos.y > 155)) {
 			winner[5] = true;
-			// winnerCheck(winner);
+			winnerCheck(winner);
 			context.drawImage(imgObj, pos.x - 50, pos.y - 50, 120, 120);
 		} else if ((pos.x < 75) && (pos.y < 365 && pos.y > 305)) {
 			winner[6] = true;
-			// winnerCheck(winner);
+			winnerCheck(winner);
 			context.drawImage(imgObj, pos.x - 50, pos.y - 50, 120, 120);
 		} else if ((pos.x < 215 && pos.x > 155) && (pos.y < 365 && pos.y > 305)) {
 			winner[7] = true;
-			// winnerCheck(winner);
+			winnerCheck(winner);
 			context.drawImage(imgObj, pos.x - 50, pos.y - 50, 120, 120);
 		} else if ((pos.x < 365 && pos.x > 305) && (pos.y < 365 && pos.y > 305)) {
 			winner[8] = true;
-			// winnerCheck(winner);
+			winnerCheck(winner);
 			context.drawImage(imgObj, pos.x - 50, pos.y - 50, 120, 120);
 		} else  {
 			console.log("MISSED!! OMG");
+			winnerCheck(winner);
 		}
 
 
@@ -73,7 +74,7 @@ function gameTime() {
 	if (uninitiated) {
 		uninitiated = false;
 		console.log("function known as gameTime is hereby running");
-		// Create the canvas
+		// Create the cookies
 		var img = new Image();
 		img.onload = function() {
 			console.log("here before the images are drawn");
@@ -89,22 +90,19 @@ function gameTime() {
 			console.log("here the images are drawn");
 		};
 		img.src = "/img/Fortune-Cookie.png";
-	} else {
-		console.log("game has already been initiated. how'd it go?");
-
-	}
+	} 
 } 
 
-	// function winnerCheck(winner) {
-	// 	for (var i = 0; i < winner.length-1; i++){
-	// 		if (winner[i] === false) {
-	// 			return;
-	// 		} else {
-	// 			console.log("There's a winner");
-	// 			return (isWinner = true);
-	// 		}
-	// 	}
-	// }
+	function winnerCheck(array) {
+		for (var i = 0; i < 9; i++){
+			if (array[i] === false ) {
+				console.log("no winner yet :-(");
+					break;
+			} else if (i == 8){
+				console.log("There's a Winner, and it is you!");
+			}
+		}
+	}
 
 
 
