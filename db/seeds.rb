@@ -10,6 +10,12 @@
 Fortune.create({ quote: "you would rather die than face the truth",
  author: "unknown"})
 
+Fortune.create({ quote: "it's the best of times; it's the end of times",
+ author: "unknown"})
+
+Fortune.create({ quote: "nothing will feel as good as nihilism looks",
+ author: "unknown"})
+
 Fortune.create({ quote: "beyond the horizon there is a vale of gloom",
  author: "unknown"})
 
@@ -26,9 +32,6 @@ Fortune.create({ quote: "in order to understand yourself, you must first destroy
  author: "unknown"})
 
 Fortune.create({ quote: "i think you're wonderful and so does everyone else",
- author: "unknown"})
-
-Fortune.create({ quote: "you are a prisoner in a croissant factory, and you love it",
  author: "unknown"})
 
 Fortune.create({ quote: "a lot of people in this room wish they were you",
@@ -67,7 +70,7 @@ Fortune.create({ quote: "no one cares. seriously. look it up",
 Fortune.create({ quote: "good things come to those who wait and sometimes not at all or ever",
  author: "unknown"})
 
-Fortune.create({ quote: "life is what happens when you wait for his text",
+Fortune.create({ quote: "life is what happens when you wait for their text",
  author: "unknown"})
 
 Fortune.create({ quote: "you've been pre-qualified to make it weird",
@@ -79,22 +82,22 @@ Fortune.create({ quote: "if you love something, it's totally your fault",
 Fortune.create({ quote: "all you need is a few more strangers telling you you're beautiful, and you'll be right as rain",
  author: "unknown"})
 
-Fortune.create({ quote: "he's not thinking about you so think about what you eat",
+Fortune.create({ quote: "they're not thinking about you so think about what you eat",
  author: "unknown"})
 
 Fortune.create({ quote: "prank your future self by wasting your life",
  author: "unknown"})
 
+Fortune.create({ quote: "when love is not madness, it is not love",
+ author: "unknown"})
+
 Fortune.create({ quote: "who ever falls in love first loses",
  author: "unknown"})
 
-Fortune.create({ quote: "percieve everything as a rejection just to be safe",
+Fortune.create({ quote: "perceive everything as a rejection, just to be safe",
  author: "unknown"})
 
 Fortune.create({ quote: "wishing things away is not effective",
- author: "unknown"})
-
-Fortune.create({ quote: "you won't be anyone besides you for the rest of your life",
  author: "unknown"})
 
 Fortune.create({ quote: "fashion tip: nobody cares",
@@ -106,19 +109,19 @@ Fortune.create({ quote: "you look stupid in pictures and that's why no one likes
 Fortune.create({ quote: "Simon says lower your expectations",
  author: "unknown"})
 
-Fortune.create({ quote: "if you're struggling in life, it's important to remember nobody cares",
+Fortune.create({ quote: "if you're struggling in life, it's important to remember that nobody cares",
  author: "unknown"})
 
 Fortune.create({ quote: "the stuff that scares you probably won't happen but other bad stuff definitely will",
  author: "unknown"})
 
-Fortune.create({ quote: "count to infinity and then text him",
+Fortune.create({ quote: "count to infinity and then text them",
  author: "unknown"})
 
 Fortune.create({ quote: "if you are afraid of lonliness don't get married",
  author: "unknown"})
 
-Fortune.create({ quote: "for a good time don't call",
+Fortune.create({ quote: "for a good time, don't call",
  author: "unknown"})
 
 Fortune.create({ quote: "you shouldn't have to go through this alone, but you will",
@@ -133,7 +136,7 @@ Fortune.create({ quote: "you miss 100% of the naps you don't take",
 Fortune.create({ quote: "nothing is the only thing that can save you now",
  author: "unknown"})
 
-Fortune.create({ quote: "have you tried dwelling on it forever",
+Fortune.create({ quote: "have you tried dwelling on it forever?",
  author: "unknown"})
 
 Fortune.create({ quote: "how to tell someone you love them: Don't",
@@ -160,6 +163,9 @@ Fortune.create({ quote: "every day is take your drugs to work day",
 Fortune.create({ quote: "every day one more person forgets about you",
  author: "unknown"})
 
+Fortune.create({ quote: "it's not safe to be a jive turkey so close to Thanksgiving",
+ author: "unknown"})
+
 Fortune.create({ quote: "no one wants to make a sandwhich with your balogna",
  author: "unknown"})
 
@@ -175,13 +181,16 @@ Fortune.create({ quote: "from now on, every song is about you",
 Fortune.create({ quote: "horoscope: like yesterday but a little bit worse",
  author: "unknown"})
 
-Fortune.create({ quote: "aren't you supposed to be dead?",
+Fortune.create({ quote: "you're going to be okay; just not the way you hoped you'd be.",
  author: "unknown"})
 
 Fortune.create({ quote: "something is terribly wrong and you don't know what it is",
  author: "unknown"})
 
 Fortune.create({ quote: "fuck the consequences",
+ author: "unknown"})
+
+Fortune.create({ quote: "once you grow bored of being in an uncrashed car, there's only one thing left to do",
  author: "unknown"})
 
 Fortune.create({ quote: "nothing significant happens until a pattern is broken",
@@ -193,16 +202,28 @@ Fortune.create({ quote: "Pro Tip: do not get out of bed",
 Fortune.create({ quote: "you will fall in love with strangers on the internet",
  author: "unknown"})
 
-Fortune.create({ quote: "you are not okay, do not tell anyone",
+Fortune.create({ quote: "you'll win some, but lose more",
+ author: "unknown"})
+
+Fortune.create({ quote: "you are not okay; do not tell anyone",
  author: "unknown"})
 
 Fortune.create({ quote: "your life is a show about nothing",
  author: "unknown"})
 
+Fortune.create({ quote: "you're not lost if no one is looking for you",
+ author: "unknown"})
+
+Fortune.create({ quote: "dedication is expensive. it will cost you your life.",
+ author: "unknown"})
+
 Fortune.create({ quote: "you do not exist",
  author: "unknown"})
 
-Fortune.create({ quote: "might as well be who you are",
+Fortune.create({ quote: "once you learn you can break your own heart, what need is there for others?",
+ author: "unknown"})
+
+Fortune.create({ quote: "we regret to inform you that you'll be this person forever",
  author: "unknown"})
 
 Fortune.create({ quote: "the secret to your future is hidden in your daily routine",
@@ -220,10 +241,37 @@ Fortune.create({ quote: "you will always admire what you do not understand",
 Fortune.create({ quote: "there is safety in nothing",
  author: "unknown"})
 
+Fortune.create({ quote: "your daytime friends are of no use in the dark",
+ author: "unknown"})
+
+Fortune.create({ quote: "the situation will get worse before it gets much worse",
+ author: "unknown"})
+
+Fortune.create({ quote: "help the police; beat yourself up",
+ author: "unknown"})
+
+Fortune.create({ quote: "you're flesh is beautiful, though temporary. use it frequently.",
+ author: "unknown"})
+
+Fortune.create({ quote: "there is poetry in brutal efficiency",
+ author: "unknown"})
+
+Fortune.create({ quote: "you can have love, or you can have freedom. you cannot have both.",
+ author: "unknown"})
+
+Fortune.create({ quote: "accept death. face god, and walk backwards into hell",
+ author: "unknown"})
+
+Fortune.create({ quote: "die at the right time",
+ author: "unknown"})
+
 Fortune.create({ quote: "ease into your irrelevance",
  author: "unknown"})
 
 Fortune.create({ quote: "they don't like you as much as you like them",
+ author: "unknown"})
+
+Fortune.create({ quote: "it is impossible to suffer without making someone pay for it; every complaint already contains revenge.",
  author: "unknown"})
 
 Fortune.create({ quote: "hey you sexy piece of shit",
@@ -232,10 +280,31 @@ Fortune.create({ quote: "hey you sexy piece of shit",
 Fortune.create({ quote: "you would rather die than face the truth",
  author: "unknown"})
 
+Fortune.create({ quote: "turn their smiles upside-down",
+ author: "unknown"})
+
+Fortune.create({ quote: "if it feels like the long days and nights are starting to blur together: relax! there aren't that many left.",
+ author: "unknown"})
+
+Fortune.create({ quote: "fuck off on the first date",
+ author: "unknown"})
+
+Fortune.create({ quote: "your life has thus far been defined by idiots",
+ author: "unknown"})
+
 Fortune.create({ quote: "that which is possible is inevitable",
  author: "unknown"})
 
+Fortune.create({ quote: "don't fool yourself, but know that you are the easiest person to fool",
+ author: "unknown"})
+
 Fortune.create({ quote: "don't expect them to forgive you",
+ author: "unknown"})
+
+Fortune.create({ quote: "failure is still an option",
+ author: "unknown"})
+
+Fortune.create({ quote: "the answer is there is no such thing as questions",
  author: "unknown"})
 
 Fortune.create({ quote: "there's no more room for improvement",

@@ -76,7 +76,7 @@ function gameTime() {
 		
 		// sets game timer to 8 seconds
 		if (!uninitiated) {
-			gameTimer(8);
+			gameTimer(2);
 		}
 
 		console.log("function known as gameTime is hereby running");
@@ -116,6 +116,11 @@ function gameTimer(num) {
 
 function gameOver() {
 	console.log("game is over! sorry charlie");
+	var x = document.createElement("SPAN");
+    var t = document.createTextNode("This is a span element.");
+    x.setAttribute("style", "background-color: pink; width: 900px; height: 900px;");
+    x.appendChild(t);
+    document.body.appendChild(x);
 }
 
 

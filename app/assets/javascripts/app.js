@@ -16,7 +16,7 @@ function smash() {
 
 	} 
 	adjustScore();
-		setTimeout(refresh, 4000);	
+		setTimeout(refresh, 3500);	
 }
 
 function logMeOut() {
