@@ -1,5 +1,15 @@
 <div id="gameResults" style="display:none;">
 	<p>win/lose screen</p>
+		<h1>
+	<% if isWinner = false %>
+		<%= puts "A WINNER IS YOU!" %>
+
+	<% else %>
+		<%= puts "A LOSER IS YOU :-(" %>
+
+	
+		</h1>
+	<% end %>
 </div>
 
 <p>Now, the main event! The ultimate test of human endurance, challenging you to surpass the limits of time itself!</p>
@@ -108,6 +118,7 @@ function winnerCheck(array) {
 				break;
 		} else if (i == 8){
 			console.log("There's a Winner, and it is you!");
+			isWinner = true;
 			var gameResults = document.getElementById("gameResults");
 			gameResults.style.display = "block";
 		}
