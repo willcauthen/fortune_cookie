@@ -92,4 +92,9 @@ canvas {
 .btn3 {
 	margin-left: 50px;
 }
-
+#gameResults {
+	position: absolute;
+	background-color: rgba(30, 30, 30, .7);
+	width: 100%;
+	height: 100%;
+}

@@ -1,10 +1,14 @@
-<p>Now, the main event! The ultimate test of human endurance, challenging you to surpass the limits of time itself!</p>
+<div id="gameResults" style="display:none;">
+	<p>win/lose screen</p>
+</div>
 
+<p>Now, the main event! The ultimate test of human endurance, challenging you to surpass the limits of time itself!</p>
 <h2>CAN YOU DESTROY ALL THE COOKIES BEFORE TIME RUNS OUT??</h2>
 
 <canvas id="killingField" width="400" height="400" style="border:1px solid red" onclick="gameTime()" >
 	
 </canvas>
+
 
 <script>
 	var canvas = document.getElementById("killingField");
@@ -76,7 +80,7 @@ function gameTime() {
 		
 		// sets game timer to 8 seconds
 		if (!uninitiated) {
-			gameTimer(2);
+			gameTimer(8);
 		}
 
 		console.log("function known as gameTime is hereby running");
@@ -104,6 +108,8 @@ function winnerCheck(array) {
 				break;
 		} else if (i == 8){
 			console.log("There's a Winner, and it is you!");
+			var gameResults = document.getElementById("gameResults");
+			gameResults.style.display = "block";
 		}
 	}
 }
@@ -116,11 +122,12 @@ function gameTimer(num) {
 
 function gameOver() {
 	console.log("game is over! sorry charlie");
-	var x = document.createElement("SPAN");
-    var t = document.createTextNode("This is a span element.");
-    x.setAttribute("style", "background-color: pink; width: 900px; height: 900px;");
-    x.appendChild(t);
-    document.body.appendChild(x);
+	var gameResults = document.getElementById("gameResults");
+	gameResults.style.display = "block";
+}
+
+function getResults() {
+
 }
 
 
