@@ -1,4 +1,4 @@
-<h1>LIST OF MOTHERFUCKERS</h1>
+<h1>LIST OF USERS</h1>
 
 <ol>
 	<% @users.each do |user| %>
@@ -7,7 +7,6 @@
 			<ul>
 				<li><%= user.email %></li>
 				<li><%= user.score %></li>
-					<%= user.password_digest %>
 			</ul>
 		</li>
 	<% end %>
