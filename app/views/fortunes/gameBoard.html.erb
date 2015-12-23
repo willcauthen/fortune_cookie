@@ -21,81 +21,82 @@
 
 
 <script>
+	//sets up syntax for canvas element
 	var canvas = document.getElementById("killingField");
 	var context = canvas.getContext("2d");
+	//prevents game from being reinitialized
 	var uninitiated = true;
+	// array to detect whcih fortune cookies have been exploded
 	var winner = [false, false, false, false, false, false, false, false, false];
-	var isWinner = false;
+	// declares variable gameTime, so it can be canceled in the event of a victory by user
 	var gameTime;
 	
 function gameStart() {
+	//set click event within the canvas element
 	canvas.addEventListener('click', function(e) {
+		//offset is important to track clicks independent of where canvas appears on the screen
 		var canvasLeft = canvas.offsetLeft,
 			canvasTop  = canvas.offsetTop;
 		var pos = {
 			x : e.pageX - canvasLeft, 
 			y : e.pageY - canvasTop
 		};
+			//defines imgObj as the explosion icon. so far, it appears JS only recognizes 'img and imgObj' as legitimate image syntax
 			var imgObj = new Image();
 			imgObj.src = "/img/explosion.png";
-		if (isWinner === true ) {
-			console.log("we already have a winner");
-			winnerCheck(winner);
 
-		} else if (pos.x < 75 && pos.y <75) {
+			//painstaking function which detects whether or not clicks landed on a chosen cookie, updates the image, and sets the corresponding array index accordingly
+		if (pos.x < 75 && pos.y <75) {
 			winner[0] = true;
 			winnerCheck(winner);
-			context.drawImage(imgObj, pos.x - 50, pos.y - 50, 120, 120);
+			context.drawImage(imgObj, pos.x - 65, pos.y - 65, 150, 150);
 		} else if ((pos.x < 215 && pos.x > 155) && (pos.y < 75)) {
 			winner[1] = true;
 			winnerCheck(winner);
-			context.drawImage(imgObj, pos.x - 50, pos.y - 50, 120, 120);
+			context.drawImage(imgObj, pos.x - 65, pos.y - 65, 150, 150);
 		} else if ((pos.x < 365 && pos.x > 305) && (pos.y < 75) ) {
 			winner[2] = true;
 			winnerCheck(winner);
-			context.drawImage(imgObj, pos.x - 50, pos.y - 50, 120, 120);
+			context.drawImage(imgObj, pos.x - 65, pos.y - 65, 150, 150);
 		} else if ((pos.x < 75) && (pos.y < 215 && pos.y > 155)) {
 			winner[3] = true;
 			winnerCheck(winner);
-			context.drawImage(imgObj, pos.x - 50, pos.y - 50, 120, 120);
+			context.drawImage(imgObj, pos.x - 65, pos.y - 65, 150, 150);
 		} else if ((pos.x < 215 && pos.x > 155)&& (pos.y < 215 && pos.y > 155)){
 			winner[4] = true;
 			winnerCheck(winner);
-			context.drawImage(imgObj, pos.x - 50, pos.y - 50, 120, 120);
+			context.drawImage(imgObj, pos.x - 65, pos.y - 65, 150, 150);
 		} else if ((pos.x < 365 && pos.x > 305) && (pos.y < 215 && pos.y > 155)) {
 			winner[5] = true;
 			winnerCheck(winner);
-			context.drawImage(imgObj, pos.x - 50, pos.y - 50, 120, 120);
+			context.drawImage(imgObj, pos.x - 65, pos.y - 65, 150, 150);
 		} else if ((pos.x < 75) && (pos.y < 365 && pos.y > 305)) {
 			winner[6] = true;
 			winnerCheck(winner);
-			context.drawImage(imgObj, pos.x - 50, pos.y - 50, 120, 120);
+			context.drawImage(imgObj, pos.x - 65, pos.y - 65, 150, 150);
 		} else if ((pos.x < 215 && pos.x > 155) && (pos.y < 365 && pos.y > 305)) {
 			winner[7] = true;
 			winnerCheck(winner);
-			context.drawImage(imgObj, pos.x - 50, pos.y - 50, 120, 120);
+			context.drawImage(imgObj, pos.x - 65, pos.y - 65, 150, 150);
 		} else if ((pos.x < 365 && pos.x > 305) && (pos.y < 365 && pos.y > 305)) {
 			winner[8] = true;
 			winnerCheck(winner);
-			context.drawImage(imgObj, pos.x - 50, pos.y - 50, 120, 120);
+			context.drawImage(imgObj, pos.x - 65, pos.y - 65, 150, 150);
 		} else  {
 			console.log("MISSED!! OMG");
 			winnerCheck(winner);
 		}
-
-
 		console.log(pos.x, pos.y);
-	}, false );
+
+
+	}, true );
+
+	//begins game setup, boolean is present to prevent game being reset
 	if (uninitiated) {
 		uninitiated = false;
-		
-		// sets game timer to 8 seconds
-		if (!uninitiated) {
-			gameTimer(8);
-		}
-
+		gameTimer(9);
 		console.log("function known as gameTime is hereby running");
-		// Create the cookies
+		// draws the cookiez
 		var img = new Image();
 		img.onload = function() {
 			context.drawImage(img, 0, 0, 75, 75);
@@ -111,23 +112,24 @@ function gameStart() {
 		img.src = "/img/Fortune-Cookie.png";
 	} 
 } 
-
+// loops through array to check if all cookies have been suitably smashed
 function winnerCheck(array) {
 	for (var i = 0; i < winner.length; i++){
 		if (array[i] === false ) {
 			console.log("no winner yet :-(");
 				break;
+		// if loop makes it to the final index and it returns true, a div dominates the DOM asking if the user would like to continue to level 2
 		} else if (i == 8){
 			clearTimeout(gameTime);
 			console.log("There's a Winner, and it is you!");
-			isWinner = true;
 			var gameResults = document.getElementById("winScreen");
 			gameResults.style.display = "block";
+			//this calls a function that adjusts the score by a single point. I'm sloppily utilizing a bug where the function is iterated for each click which has taken place on the canvas, which at minimum is 10
 			adjustScore();
 		}
 	}
 }
-
+//function for game timer. when timer runs out, a div is shown which takes up the DOM announcing a failure
 function gameTimer(num) {
 	num = num * 1000;
 	gameTime = setTimeout(gameOver, num);
@@ -139,11 +141,4 @@ function gameOver() {
 	var gameResults = document.getElementById("loseScreen");
 	gameResults.style.display = "block";
 }
-
-function getResults() {
-
-}
-
-
-
 </script>
