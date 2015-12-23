@@ -268,9 +268,6 @@ Fortune.create({ quote: "it is impossible to suffer without making someone pay f
 Fortune.create({ quote: "hey you sexy piece of shit",
  author: "unknown"})
 
-Fortune.create({ quote: "you would rather die than face the truth",
- author: "unknown"})
-
 Fortune.create({ quote: "turn their smiles upside-down",
  author: "unknown"})
 
