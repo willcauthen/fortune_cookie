@@ -283,6 +283,9 @@ Fortune.create({ quote: "you would rather die than face the truth",
 Fortune.create({ quote: "turn their smiles upside-down",
  author: "unknown"})
 
+Fortune.create({ quote: "you are every mother's cautionary tale",
+ author: "unknown"})
+
 Fortune.create({ quote: "if it feels like the long days and nights are starting to blur together: relax! there aren't that many left.",
  author: "unknown"})
 
