@@ -1,21 +1,21 @@
-<div id="gameResults" style="display:none;">
-	<p>win/lose screen</p>
-		<h1>
-	<% if isWinner = false %>
-		<%= puts "A WINNER IS YOU!" %>
+<div class="gameResults" id="winScreen" style="display:none;">
+	<h3>
+		<p>You did it! You beat the odds, and crushed all opposition and fortune cookies standing in your path. Dare you continue?</p>
+	</h3>
+	<a href="/game/2"><button>I dare.</button></a>
+</div>
 
-	<% else %>
-		<%= puts "A LOSER IS YOU :-(" %>
-
-	
-		</h1>
-	<% end %>
+<div class="gameResults" id="loseScreen" style="display:none;">
+	<h3>
+		<p>You have failed, utterly and completely. But it is only a defeat if you fail to continue. Can you take more punishment?</p>
+	</h3>
+	<button onclick="refresh()">Yes sir, may I have another?</button>
 </div>
 
 <p>Now, the main event! The ultimate test of human endurance, challenging you to surpass the limits of time itself!</p>
 <h2>CAN YOU DESTROY ALL THE COOKIES BEFORE TIME RUNS OUT??</h2>
 
-<canvas id="killingField" width="400" height="400" style="border:1px solid red" onclick="gameTime()" >
+<canvas id="killingField" width="400" height="400" style="border:1px solid red" onclick="gameStart()" >
 	
 </canvas>
 
@@ -26,8 +26,9 @@
 	var uninitiated = true;
 	var winner = [false, false, false, false, false, false, false, false, false];
 	var isWinner = false;
+	var gameTime;
 	
-function gameTime() {
+function gameStart() {
 	canvas.addEventListener('click', function(e) {
 		var canvasLeft = canvas.offsetLeft,
 			canvasTop  = canvas.offsetTop;
@@ -117,23 +118,25 @@ function winnerCheck(array) {
 			console.log("no winner yet :-(");
 				break;
 		} else if (i == 8){
+			clearTimeout(gameTime);
 			console.log("There's a Winner, and it is you!");
 			isWinner = true;
-			var gameResults = document.getElementById("gameResults");
+			var gameResults = document.getElementById("winScreen");
 			gameResults.style.display = "block";
+			adjustScore();
 		}
 	}
 }
 
 function gameTimer(num) {
 	num = num * 1000;
-	setTimeout(gameOver, num);
+	gameTime = setTimeout(gameOver, num);
 	console.log("game timer has been started");
 }
 
 function gameOver() {
 	console.log("game is over! sorry charlie");
-	var gameResults = document.getElementById("gameResults");
+	var gameResults = document.getElementById("loseScreen");
 	gameResults.style.display = "block";
 }
 

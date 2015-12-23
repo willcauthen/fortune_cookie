@@ -23,9 +23,9 @@ function logMeOut() {
 	current_user = 0;
 	console.log("logout function has been triggered");
 }
-		function refresh() {
-					document.location.reload(true);
-				}
+function refresh() {
+	document.location.reload(true);
+}
 
 function adjustScore() {
 	$.ajax({

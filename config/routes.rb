@@ -17,5 +17,6 @@ Rails.application.routes.draw do
   resources :users
 
   	get "/game", to: "fortunes#gameBoard"
+    get "/game/2", to: "fortunes#gameBoard2"
 
 end
