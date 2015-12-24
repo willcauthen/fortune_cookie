@@ -9,7 +9,7 @@
 
   
 </head>
-<body>
+<body onload="preparePage()">
 	 <% if current_user %>
 	<h4> <%= current_user.user_name %> : <%= current_user.score %> </h4>
 

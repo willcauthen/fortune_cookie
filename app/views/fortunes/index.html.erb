@@ -1,16 +1,16 @@
- 	<p>CAN YOU GET ALL THE POINTS??</p>
- 	<p>Click the cookie to smash it! Smash the cookie to get points, if you're logged in!</p>
+ 	<h4>CAN YOU GET ALL THE POINTS??</h4>
+ 	<h6>Click the cookie to smash it! Smash the cookie to get points, if you're logged in!</h6>
 <hr>
  	<!-- your nihilistic fortune cookie reads: -->
-<div onload="preparePage()">
 	<img id="cookie" onclick="smash()" src="/img/Fortune-Cookie.png" >
 	<img id="debris" src="/img/explosion.png" alt="" style="display:none">
+	
 	<% x = @fortunes.length %>
 	<% num = rand(x) %>
 	<% a = rand(10), rand(10..24), rand(25..49) %>
+	
 	<div class="cool" id="prophesy" style="display:none">
 		<%= @fortunes[num].quote %> <br>
 		<br>
 		Meaningless numbers: <%= a %> <br>
 	</div>
-</div>
