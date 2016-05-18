@@ -1,9 +1,8 @@
- console.log("We're in good shape");
+console.log("We're in good shape");
 var prophesy;
 
 function preparePage() {
 	prophesy = document.getElementById("prophesy");
-	console.log(prophesy);
 }
 
 function smash() {
@@ -12,27 +11,28 @@ function smash() {
 		cookie.style.display = 'none';
 		debris.style.display = '';
 		prophesy.style.display = "block";
-		console.log("it was clicked");
-
 	} 
+	document.getElementById("prophesy").scrollIntoView();
+	
 	adjustScore();
-		setTimeout(refresh, 3500);	
+	setTimeout(function () {
+		document.location.reload(true);
+	}, 3500);	
 }
 
 function logMeOut() {
 	current_user = 0;
 	console.log("logout function has been triggered");
 }
-function refresh() {
-	document.location.reload(true);
-}
 
 function adjustScore() {
 	$.ajax({
-		type: 'PUT',
+		type: 'POST',
 		url: '/increment_score',
-		data: { _method: 'PUT'},
+		data: { method: 'POST'},
 	}).success (200, function() {
 		console.log("success");
+	}).error(400, function(err) {
+		console.log(err);
 	});
 }

@@ -2,7 +2,6 @@ class SessionsController < ApplicationController
 	def new
 		@current_user = current_user
 		@user = User.new
-		# render :new
 	end
 	def create
 	    user_params = params.require(:user).permit(:email, :password)
@@ -11,11 +10,11 @@ class SessionsController < ApplicationController
 	      login(@user)
 	      redirect_to "/users/#{@user.id}"
 	    else
-	      redirect_to "/sign_in"
+	      redirect_to sign_in_path
 	    end
   	end
   	def destroy 
 		logout
-  		redirect_to "/"
+  		redirect_to root_path
   	end
 end

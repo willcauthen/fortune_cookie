@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  # Route::Application.routes.draw do
-  # end
+
     root to: "fortunes#index"
     resources :fortunes
   	resources :users 
@@ -12,7 +11,7 @@ Rails.application.routes.draw do
 
   	get "/sign-up", to: "users#new", as: "sign-up"
 
-    put "/increment_score", to: 'users#update'
+    post "/increment_score", to: 'users#update'
 
   resources :users
 
