@@ -29,10 +29,14 @@ function refresh() {
 
 function adjustScore() {
 	$.ajax({
-		type: 'PUT',
+		type: 'POST',
 		url: '/increment_score',
-		data: { _method: 'PUT'},
+		data: { method: 'POST'},
 	}).success (200, function() {
 		console.log("success");
+	}).error(400, function(err) {
+		console.log(err);
+		debugger
+		
 	});
 }

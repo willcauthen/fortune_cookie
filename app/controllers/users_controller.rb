@@ -23,6 +23,7 @@ class UsersController < ApplicationController
 	end
 	def update
 		increment_score
+		redirect_to root_path
 	end
 
 

@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   	get "/sign-up", to: "users#new", as: "sign-up"
 
-    put "/increment_score", to: 'users#update'
+    post "/increment_score", to: 'users#update'
 
   resources :users
 
