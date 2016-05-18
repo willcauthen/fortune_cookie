@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  # Route::Application.routes.draw do
-  # end
+
     root to: "fortunes#index"
     resources :fortunes
   	resources :users 
